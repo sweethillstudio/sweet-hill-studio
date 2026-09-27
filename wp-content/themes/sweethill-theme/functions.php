@@ -128,6 +128,13 @@ function sweethill_theme_scripts() {
         $theme_version,
         true
     );
+
+    // Pass runtime configuration and asset endpoints to animation engine.
+    wp_localize_script('sweethill-animations', 'sweetHillThemeData', [
+        'themeUri'        => SWEETHILL_THEME_URI,
+        'heroFramesTotal' => 56,
+        'heroFramesPath'  => SWEETHILL_THEME_URI . '/assets/images/HERO/ezgif-frame-',
+    ]);
 }
 add_action('wp_enqueue_scripts', 'sweethill_theme_scripts');
 

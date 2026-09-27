@@ -3,27 +3,30 @@
 <!-- wp:group {"tagName":"main","layout":{"type":"default"}} -->
 <main class="wp-block-group">
 
-	<!-- Section 1: Multi-layered 3D Parallax Hero Stage (Oryzo.ai Aesthetic) -->
+	<!-- Section 1: Multi-layered 3D Parallax Hero Stage (Dark Oryzo.ai Aesthetic) -->
 	<!-- wp:html -->
 	<section id="hero-3d-stage" class="sweethill-hero-3d" aria-label="Sweet Hill Universe 3D Hero">
-		<!-- Multi-layered Parallax Canvas -->
+		<!-- Multi-layered Parallax Canvas Container -->
 		<div class="hero-layers-container">
-			<!-- Layer 1: Background Atmosphere -->
-			<img class="hero-layer hero-layer-bg" src="/wp-content/themes/sweethill-theme/assets/images/hero-bg.webp" alt="Sweet Hill Background Atmosphere" loading="eager" fetchpriority="high">
+			<!-- Layer 1: Deep Background Atmosphere -->
+			<img class="hero-layer hero-layer-bg" src="/wp-content/themes/sweethill-theme/assets/images/HERO/ezgif-frame-001.webp" alt="Sweet Hill Universe Deep Background" loading="eager" fetchpriority="high">
 
-			<!-- Layer 2: Midground Characters -->
-			<img class="hero-layer hero-layer-mid" src="/wp-content/themes/sweethill-theme/assets/images/hero-mid.webp" alt="Sweet Hill Story Characters" loading="eager">
+			<!-- Layer 2: Midground Environment & Characters -->
+			<img class="hero-layer hero-layer-mid" src="/wp-content/themes/sweethill-theme/assets/images/HERO/ezgif-frame-028.webp" alt="Sweet Hill Story Characters & World" loading="eager">
 
 			<!-- Layer 3: Foreground Spatial Elements -->
-			<img class="hero-layer hero-layer-fg" src="/wp-content/themes/sweethill-theme/assets/images/hero-fg.webp" alt="Sweet Hill Foreground Dimension" loading="eager">
+			<img class="hero-layer hero-layer-fg" src="/wp-content/themes/sweethill-theme/assets/images/HERO/ezgif-frame-056.webp" alt="Sweet Hill Foreground Dimension" loading="eager">
+
+			<!-- High-Performance Canvas for 56-Frame Cinematic Camera Scrubbing -->
+			<canvas id="hero-frame-canvas" class="hero-frame-canvas" width="1920" height="1080" data-frames-count="56" data-frame-base="/wp-content/themes/sweethill-theme/assets/images/HERO/ezgif-frame-"></canvas>
 		</div>
 
-		<!-- Scrim Overlays to guarantee typography contrast -->
+		<!-- Scrim Overlays to guarantee contrast on Dark Obsidian (#0A0A0B) -->
 		<div class="hero-scrim-overlay" aria-hidden="true"></div>
 		<div class="hero-scrim-top" aria-hidden="true"></div>
 		<div class="hero-scrim-bottom" aria-hidden="true"></div>
 
-		<!-- Massive Editorial Typography & CTA Content Overlay -->
+		<!-- Massive Editorial Typography & CTA Content Overlay (Oryzo.ai Scale) -->
 		<div class="hero-content-overlay">
 			<div class="hero-eyebrow-badge">
 				<span class="badge-dot"></span>
@@ -54,28 +57,28 @@
 	<!-- /wp:html -->
 
 	<!-- Section 2: Introduction (Why Sweet Hill?) -->
-	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}},"border":{"top":{"color":"var:preset|color|warm-sand","width":"1px"}}},"backgroundColor":"soft-cream","layout":{"type":"constrained"}} -->
-	<div class="wp-block-group alignfull has-soft-cream-background-color has-background" style="border-top-color:var(--wp--preset--color--warm-sand);border-top-width:1px;border-top-style:solid;padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
+	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}},"border":{"top":{"color":"var:preset|color|border-dark","width":"1px"},"bottom":{"color":"var:preset|color|border-dark","width":"1px"}}},"backgroundColor":"dark-surface","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull has-dark-surface-background-color has-background" style="border-top-color:var(--wp--preset--color--border-dark);border-top-width:1px;border-top-style:solid;border-bottom-color:var(--wp--preset--color--border-dark);border-bottom-width:1px;border-bottom-style:solid;padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
 		<!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
 		<div class="wp-block-group alignwide">
 			<!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|50","left":"var:preset|spacing|70"}}}} -->
 			<div class="wp-block-columns">
 				<!-- wp:column {"width":"45%"} -->
 				<div class="wp-block-column" style="flex-basis:45%">
-					<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|interface-sans","fontSize":"var:preset|font-size|small","letterSpacing":"0.14em","textTransform":"uppercase","fontWeight":"700"}},"textColor":"vibrant-orange"} -->
-					<p class="has-vibrant-orange-color has-text-color has-small-font-size" style="font-weight:700;letterSpacing:0.14em;text-transform:uppercase">Why Sweet Hill?</p>
+					<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|interface-sans","fontSize":"var:preset|font-size|small","letterSpacing":"0.16em","textTransform":"uppercase","fontWeight":"700"}},"textColor":"vibrant-orange"} -->
+					<p class="has-vibrant-orange-color has-text-color has-small-font-size" style="font-weight:700;letter-spacing:0.16em;text-transform:uppercase">Why Sweet Hill?</p>
 					<!-- /wp:paragraph -->
 
-					<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var:preset|font-family|editorial-serif","fontSize":"var:preset|font-size|h2","lineHeight":"1.0"}},"className":"kinetic-heading-reveal"} -->
-					<h2 class="wp-block-heading has-editorial-serif-font-family has-h-2-font-size kinetic-heading-reveal" style="line-height:1.0">A publishing house in development.</h2>
+					<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var:preset|font-family|editorial-serif","fontSize":"var:preset|font-size|h2","lineHeight":"1.0"}},"textColor":"bright-ink","className":"kinetic-heading-reveal"} -->
+					<h2 class="wp-block-heading has-bright-ink-color has-text-color has-editorial-serif-font-family has-h-2-font-size kinetic-heading-reveal" style="line-height:1.0">A publishing house in development.</h2>
 					<!-- /wp:heading -->
 				</div>
 				<!-- /wp:column -->
 
 				<!-- wp:column {"width":"55%"} -->
 				<div class="wp-block-column" style="flex-basis:55%">
-					<!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|body","lineHeight":"1.8"}}} -->
-					<p class="has-body-font-size" style="line-height:1.8">
+					<!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|body","lineHeight":"1.8"}},"textColor":"bright-ink"} -->
+					<p class="has-bright-ink-color has-text-color has-body-font-size" style="line-height:1.8">
 						Some stories entertain us. Some stay with us. Sweet Hill Studio is an independent publishing house dedicated to creating beautiful, culturally authentic books for children. We believe traditional stories deserve extraordinary presentation.
 					</p>
 					<!-- /wp:paragraph -->
@@ -97,22 +100,22 @@
 	<!-- /wp:group -->
 
 	<!-- Section 3: On The Shelf (Dynamic Book Showcase) -->
-	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}},"backgroundColor":"warm-beige","layout":{"type":"constrained"}} -->
-	<div class="wp-block-group alignfull has-warm-beige-background-color has-background" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
+	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}},"backgroundColor":"dark-obsidian","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull has-dark-obsidian-background-color has-background" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
 		<!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
 		<div class="wp-block-group alignwide">
 			<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained","justifyContent":"left"}} -->
 			<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--60)">
-				<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|interface-sans","fontSize":"var:preset|font-size|small","letterSpacing":"0.14em","textTransform":"uppercase","fontWeight":"700"}},"textColor":"vibrant-green"} -->
-				<p class="has-vibrant-green-color has-text-color has-small-font-size" style="font-weight:700;letterSpacing:0.14em;text-transform:uppercase">On The Shelf</p>
+				<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|interface-sans","fontSize":"var:preset|font-size|small","letterSpacing":"0.16em","textTransform":"uppercase","fontWeight":"700"}},"textColor":"vibrant-green"} -->
+				<p class="has-vibrant-green-color has-text-color has-small-font-size" style="font-weight:700;letter-spacing:0.16em;text-transform:uppercase">On The Shelf</p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var:preset|font-family|editorial-serif","fontSize":"var:preset|font-size|h2","lineHeight":"1.0"}},"className":"kinetic-heading-reveal"} -->
-				<h2 class="wp-block-heading has-editorial-serif-font-family has-h-2-font-size kinetic-heading-reveal" style="line-height:1.0">Books Currently Available</h2>
+				<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var:preset|font-family|editorial-serif","fontSize":"var:preset|font-size|h2","lineHeight":"1.0"}},"textColor":"bright-ink","className":"kinetic-heading-reveal"} -->
+				<h2 class="wp-block-heading has-bright-ink-color has-text-color has-editorial-serif-font-family has-h-2-font-size kinetic-heading-reveal" style="line-height:1.0">Books Currently Available</h2>
 				<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"textColor":"deep-ink","style":{"typography":{"fontSize":"var:preset|font-size|body"}}} -->
-				<p class="has-deep-ink-color has-text-color has-body-font-size">New stories, familiar worlds, and a few books worth making room for.</p>
+				<!-- wp:paragraph {"textColor":"muted-ink","style":{"typography":{"fontSize":"var:preset|font-size|body"}}} -->
+				<p class="has-muted-ink-color has-text-color has-body-font-size">New stories, familiar worlds, and a few books worth making room for.</p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
@@ -120,11 +123,11 @@
 			<!-- wp:query {"queryId":1,"query":{"perPage":3,"pages":0,"offset":0,"postType":"book","order":"asc","orderBy":"title","author":"","search":"","exclude":[],"sticky":"","inherit":false}} -->
 			<div class="wp-block-query">
 				<!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|50"}},"layout":{"type":"grid","columnCount":3}} -->
-					<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}},"border":{"color":"var:preset|color|warm-sand","width":"1px","radius":"12px"}},"backgroundColor":"white","layout":{"type":"constrained"}} -->
-					<div class="wp-block-group has-white-background-color has-background" style="border-color:var(--wp--preset--color--warm-sand);border-width:1px;border-style:solid;border-radius:12px;padding:var(--wp--preset--spacing--30)">
-						<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"1","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|30"}},"border":{"radius":"8px"}}} /-->
-						<!-- wp:post-title {"isLink":true,"level":3,"style":{"typography":{"fontFamily":"var:preset|font-family|editorial-serif","fontSize":"var:preset|font-size|h4"}}} /-->
-						<!-- wp:post-excerpt {"moreText":"","style":{"typography":{"fontSize":"var:preset|font-size|small"}}} /-->
+					<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}},"border":{"color":"var:preset|color|border-dark","width":"1px","radius":"16px"}},"backgroundColor":"dark-card","className":"sweethill-card-interactive","layout":{"type":"constrained"}} -->
+					<div class="wp-block-group sweethill-card-interactive has-dark-card-background-color has-background" style="border-color:var(--wp--preset--color--border-dark);border-width:1px;border-style:solid;border-radius:16px;padding:var(--wp--preset--spacing--30)">
+						<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"1","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|30"}},"border":{"radius":"10px"}}} /-->
+						<!-- wp:post-title {"isLink":true,"level":3,"style":{"typography":{"fontFamily":"var:preset|font-family|editorial-serif","fontSize":"var:preset|font-size|h4"}},"textColor":"bright-ink"} /-->
+						<!-- wp:post-excerpt {"moreText":"","style":{"typography":{"fontSize":"var:preset|font-size|small"}},"textColor":"muted-ink"} /-->
 						<!-- wp:read-more {"content":"View Edition &rarr;","style":{"typography":{"fontSize":"var:preset|font-size|small","fontWeight":"700"}},"textColor":"vibrant-orange"} /-->
 					</div>
 					<!-- /wp:group -->
@@ -137,18 +140,18 @@
 	<!-- /wp:group -->
 
 	<!-- Section 4: Story Universe (Beyond the Book) -->
-	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}},"backgroundColor":"soft-cream","layout":{"type":"constrained"}} -->
-	<div class="wp-block-group alignfull has-soft-cream-background-color has-background" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
+	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}},"border":{"top":{"color":"var:preset|color|border-dark","width":"1px"}}},"backgroundColor":"dark-surface","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull has-dark-surface-background-color has-background" style="border-top-color:var(--wp--preset--color--border-dark);border-top-width:1px;border-top-style:solid;padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
 		<!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
 		<div class="wp-block-group alignwide">
 			<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained","justifyContent":"left"}} -->
 			<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--50)">
-				<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|interface-sans","fontSize":"var:preset|font-size|small","letterSpacing":"0.14em","textTransform":"uppercase","fontWeight":"700"}},"textColor":"vibrant-orange"} -->
-				<p class="has-vibrant-orange-color has-text-color has-small-font-size" style="font-weight:700;letterSpacing:0.14em;text-transform:uppercase">Beyond The Book</p>
+				<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var:preset|font-family|interface-sans","fontSize":"var:preset|font-size|small","letterSpacing":"0.16em","textTransform":"uppercase","fontWeight":"700"}},"textColor":"vibrant-orange"} -->
+				<p class="has-vibrant-orange-color has-text-color has-small-font-size" style="font-weight:700;letter-spacing:0.16em;text-transform:uppercase">Beyond The Book</p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var:preset|font-family|editorial-serif","fontSize":"var:preset|font-size|h2","lineHeight":"1.0"}},"className":"kinetic-heading-reveal"} -->
-				<h2 class="wp-block-heading has-editorial-serif-font-family has-h-2-font-size kinetic-heading-reveal" style="line-height:1.0">Explore The Sweet Hill Universe</h2>
+				<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var:preset|font-family|editorial-serif","fontSize":"var:preset|font-size|h2","lineHeight":"1.0"}},"textColor":"bright-ink","className":"kinetic-heading-reveal"} -->
+				<h2 class="wp-block-heading has-bright-ink-color has-text-color has-editorial-serif-font-family has-h-2-font-size kinetic-heading-reveal" style="line-height:1.0">Explore The Sweet Hill Universe</h2>
 				<!-- /wp:heading -->
 			</div>
 			<!-- /wp:group -->
@@ -157,13 +160,13 @@
 			<div class="wp-block-columns">
 				<!-- wp:column -->
 				<div class="wp-block-column">
-					<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"border":{"color":"var:preset|color|warm-sand","width":"1px","radius":"16px"}},"backgroundColor":"warm-beige","layout":{"type":"constrained"}} -->
-					<div class="wp-block-group has-warm-beige-background-color has-background" style="border-color:var(--wp--preset--color--warm-sand);border-width:1px;border-style:solid;border-radius:16px;padding:var(--wp--preset--spacing--50) var(--wp--preset--spacing--40)">
-						<!-- wp:heading {"level":3,"style":{"typography":{"fontFamily":"var:preset|font-family|editorial-serif","fontSize":"var:preset|font-size|h3"}}} -->
-						<h3 class="wp-block-heading has-editorial-serif-font-family has-h-3-font-size">Stories</h3>
+					<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"border":{"color":"var:preset|color|border-dark","width":"1px","radius":"16px"}},"backgroundColor":"dark-card","className":"sweethill-card-interactive","layout":{"type":"constrained"}} -->
+					<div class="wp-block-group sweethill-card-interactive has-dark-card-background-color has-background" style="border-color:var(--wp--preset--color--border-dark);border-width:1px;border-style:solid;border-radius:16px;padding:var(--wp--preset--spacing--50) var(--wp--preset--spacing--40)">
+						<!-- wp:heading {"level":3,"style":{"typography":{"fontFamily":"var:preset|font-family|editorial-serif","fontSize":"var:preset|font-size|h3"}},"textColor":"bright-ink"} -->
+						<h3 class="wp-block-heading has-bright-ink-color has-text-color has-editorial-serif-font-family has-h-3-font-size">Stories</h3>
 						<!-- /wp:heading -->
-						<!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|body"}}} -->
-						<p class="has-body-font-size">Timeless narratives adapted from original śāstra.</p>
+						<!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|body"}},"textColor":"muted-ink"} -->
+						<p class="has-muted-ink-color has-text-color has-body-font-size">Timeless narratives adapted from original śāstra.</p>
 						<!-- /wp:paragraph -->
 						<!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|small","fontWeight":"700"}},"textColor":"vibrant-orange"} -->
 						<p class="has-vibrant-orange-color has-text-color has-small-font-size" style="font-weight:700"><a href="/series/">Explore Stories &rarr;</a></p>
@@ -175,13 +178,13 @@
 
 				<!-- wp:column -->
 				<div class="wp-block-column">
-					<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"border":{"color":"var:preset|color|warm-sand","width":"1px","radius":"16px"}},"backgroundColor":"warm-beige","layout":{"type":"constrained"}} -->
-					<div class="wp-block-group has-warm-beige-background-color has-background" style="border-color:var(--wp--preset--color--warm-sand);border-width:1px;border-style:solid;border-radius:16px;padding:var(--wp--preset--spacing--50) var(--wp--preset--spacing--40)">
-						<!-- wp:heading {"level":3,"style":{"typography":{"fontFamily":"var:preset|font-family|editorial-serif","fontSize":"var:preset|font-size|h3"}}} -->
-						<h3 class="wp-block-heading has-editorial-serif-font-family has-h-3-font-size">Characters</h3>
+					<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"border":{"color":"var:preset|color|border-dark","width":"1px","radius":"16px"}},"backgroundColor":"dark-card","className":"sweethill-card-interactive","layout":{"type":"constrained"}} -->
+					<div class="wp-block-group sweethill-card-interactive has-dark-card-background-color has-background" style="border-color:var(--wp--preset--color--border-dark);border-width:1px;border-style:solid;border-radius:16px;padding:var(--wp--preset--spacing--50) var(--wp--preset--spacing--40)">
+						<!-- wp:heading {"level":3,"style":{"typography":{"fontFamily":"var:preset|font-family|editorial-serif","fontSize":"var:preset|font-size|h3"}},"textColor":"bright-ink"} -->
+						<h3 class="wp-block-heading has-bright-ink-color has-text-color has-editorial-serif-font-family has-h-3-font-size">Characters</h3>
 						<!-- /wp:heading -->
-						<!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|body"}}} -->
-						<p class="has-body-font-size">Beloved personalities, saints, and cosmic adventurers.</p>
+						<!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|body"}},"textColor":"muted-ink"} -->
+						<p class="has-muted-ink-color has-text-color has-body-font-size">Beloved personalities, saints, and cosmic adventurers.</p>
 						<!-- /wp:paragraph -->
 						<!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|small","fontWeight":"700"}},"textColor":"vibrant-green"} -->
 						<p class="has-vibrant-green-color has-text-color has-small-font-size" style="font-weight:700"><a href="/characters/">Meet Characters &rarr;</a></p>
@@ -193,13 +196,13 @@
 
 				<!-- wp:column -->
 				<div class="wp-block-column">
-					<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"border":{"color":"var:preset|color|warm-sand","width":"1px","radius":"16px"}},"backgroundColor":"warm-beige","layout":{"type":"constrained"}} -->
-					<div class="wp-block-group has-warm-beige-background-color has-background" style="border-color:var(--wp--preset--color--warm-sand);border-width:1px;border-style:solid;border-radius:16px;padding:var(--wp--preset--spacing--50) var(--wp--preset--spacing--40)">
-						<!-- wp:heading {"level":3,"style":{"typography":{"fontFamily":"var:preset|font-family|editorial-serif","fontSize":"var:preset|font-size|h3"}}} -->
-						<h3 class="wp-block-heading has-editorial-serif-font-family has-h-3-font-size">The Storymakers</h3>
+					<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"border":{"color":"var:preset|color|border-dark","width":"1px","radius":"16px"}},"backgroundColor":"dark-card","className":"sweethill-card-interactive","layout":{"type":"constrained"}} -->
+					<div class="wp-block-group sweethill-card-interactive has-dark-card-background-color has-background" style="border-color:var(--wp--preset--color--border-dark);border-width:1px;border-style:solid;border-radius:16px;padding:var(--wp--preset--spacing--50) var(--wp--preset--spacing--40)">
+						<!-- wp:heading {"level":3,"style":{"typography":{"fontFamily":"var:preset|font-family|editorial-serif","fontSize":"var:preset|font-size|h3"}},"textColor":"bright-ink"} -->
+						<h3 class="wp-block-heading has-bright-ink-color has-text-color has-editorial-serif-font-family has-h-3-font-size">The Storymakers</h3>
 						<!-- /wp:heading -->
-						<!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|body"}}} -->
-						<p class="has-body-font-size">The authors, illustrators, and creators behind the books.</p>
+						<!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|body"}},"textColor":"muted-ink"} -->
+						<p class="has-muted-ink-color has-text-color has-body-font-size">The authors, illustrators, and creators behind the books.</p>
 						<!-- /wp:paragraph -->
 						<!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|small","fontWeight":"700"}},"textColor":"vibrant-orange"} -->
 						<p class="has-vibrant-orange-color has-text-color has-small-font-size" style="font-weight:700"><a href="/storymakers/">Meet Creators &rarr;</a></p>

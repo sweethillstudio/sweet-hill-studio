@@ -1,7 +1,7 @@
 {
   "$schema": "https://schemas.wp.org/trunk/theme.json",
   "version": 3,
-  "title": "Sweet Hill Studio - Oryzo Aesthetic Pivot",
+  "title": "Sweet Hill Studio - Oryzo Aesthetic Pivot (Dark Mode)",
   "settings": {
     "appearanceTools": true,
     "useRootPaddingAwareAlignments": true,
@@ -15,14 +15,34 @@
       "defaultGradients": false,
       "palette": [
         {
-          "slug": "warm-beige",
-          "color": "#FFEDCA",
-          "name": "Warm Organic Beige / Ivory"
+          "slug": "dark-obsidian",
+          "color": "#0A0A0B",
+          "name": "Dark Obsidian Canvas"
         },
         {
-          "slug": "deep-ink",
-          "color": "#0A0A0B",
-          "name": "Deep Ink"
+          "slug": "dark-surface",
+          "color": "#121316",
+          "name": "Dark Surface"
+        },
+        {
+          "slug": "dark-card",
+          "color": "#1A1B20",
+          "name": "Dark Card Surface"
+        },
+        {
+          "slug": "dark-card-hover",
+          "color": "#242630",
+          "name": "Dark Card Hover"
+        },
+        {
+          "slug": "bright-ink",
+          "color": "#FDFBF7",
+          "name": "Bright Ink"
+        },
+        {
+          "slug": "muted-ink",
+          "color": "#A0A0A8",
+          "name": "Muted Ink"
         },
         {
           "slug": "vibrant-orange",
@@ -35,24 +55,76 @@
           "name": "Vibrant Green"
         },
         {
-          "slug": "soft-cream",
-          "color": "#F6E2B8",
-          "name": "Soft Cream Surface"
+          "slug": "gold-accent",
+          "color": "#E5A93C",
+          "name": "Vedic Gold Accent"
         },
         {
-          "slug": "warm-sand",
-          "color": "#E8CE9D",
-          "name": "Warm Sand"
-        },
-        {
-          "slug": "charcoal",
-          "color": "#1D1E22",
-          "name": "Charcoal"
+          "slug": "border-dark",
+          "color": "#24262E",
+          "name": "Subtle Dark Border"
         },
         {
           "slug": "white",
           "color": "#FFFFFF",
           "name": "Pure White"
+        },
+        {
+          "slug": "warm-beige",
+          "color": "#121316",
+          "name": "Dark Surface (legacy alias)"
+        },
+        {
+          "slug": "soft-cream",
+          "color": "#1A1B20",
+          "name": "Dark Card (legacy alias)"
+        },
+        {
+          "slug": "warm-ivory",
+          "color": "#0A0A0B",
+          "name": "Dark Obsidian (legacy alias)"
+        },
+        {
+          "slug": "soft-parchment",
+          "color": "#121316",
+          "name": "Dark Surface (legacy alias)"
+        },
+        {
+          "slug": "charcoal",
+          "color": "#FDFBF7",
+          "name": "Bright Ink (legacy alias)"
+        },
+        {
+          "slug": "deep-ink",
+          "color": "#FDFBF7",
+          "name": "Bright Ink (legacy alias)"
+        },
+        {
+          "slug": "warm-sand",
+          "color": "#24262E",
+          "name": "Dark Border (legacy alias)"
+        },
+        {
+          "slug": "muted-earth",
+          "color": "#A0A0A8",
+          "name": "Muted Ink (legacy alias)"
+        }
+      ],
+      "gradients": [
+        {
+          "slug": "dark-fade",
+          "gradient": "linear-gradient(180deg, #0A0A0B 0%, #121316 100%)",
+          "name": "Dark Fade"
+        },
+        {
+          "slug": "orange-glow",
+          "gradient": "radial-gradient(circle, rgba(255,85,0,0.2) 0%, rgba(10,10,11,0) 70%)",
+          "name": "Orange Glow"
+        },
+        {
+          "slug": "green-glow",
+          "gradient": "radial-gradient(circle, rgba(15,169,88,0.18) 0%, rgba(10,10,11,0) 70%)",
+          "name": "Green Glow"
         }
       ]
     },
@@ -89,7 +161,7 @@
           "fontFace": [
             {
               "fontFamily": "Plus Jakarta Sans",
-              "fontWeight": "300 700",
+              "fontWeight": "300 800",
               "fontStyle": "normal",
               "fontDisplay": "swap",
               "src": ["file:./assets/fonts/plus-jakarta-sans/PlusJakartaSans-VariableFont_wght.woff2"]
@@ -157,7 +229,7 @@
           "size": "5.5rem",
           "slug": "h1",
           "fluid": {
-            "min": "3rem",
+            "min": "3.25rem",
             "max": "6.5rem"
           }
         },
@@ -166,7 +238,7 @@
           "size": "8rem",
           "slug": "display",
           "fluid": {
-            "min": "4rem",
+            "min": "4.5rem",
             "max": "9.5rem"
           }
         }
@@ -228,13 +300,13 @@
       "defaultPresets": false,
       "presets": [
         {
-          "name": "Oryzo Organic Soft Shadow",
-          "shadow": "0 8px 30px rgba(10, 10, 11, 0.06)",
+          "name": "Oryzo Dark Subtle Shadow",
+          "shadow": "0 8px 30px rgba(0, 0, 0, 0.45)",
           "slug": "subtle"
         },
         {
-          "name": "Elevated Glass Surface",
-          "shadow": "0 20px 48px rgba(10, 10, 11, 0.12)",
+          "name": "Elevated Dark Glowing Surface",
+          "shadow": "0 20px 48px rgba(0, 0, 0, 0.7), 0 0 1px rgba(255, 255, 255, 0.12)",
           "slug": "elevation"
         }
       ]
@@ -242,13 +314,13 @@
   },
   "styles": {
     "color": {
-      "background": "var:preset|color|warm-beige",
-      "text": "var:preset|color|deep-ink"
+      "background": "var:preset|color|dark-obsidian",
+      "text": "var:preset|color|bright-ink"
     },
     "typography": {
       "fontFamily": "var:preset|font-family|interface-sans",
       "fontSize": "var:preset|font-size|body",
-      "lineHeight": "1.6"
+      "lineHeight": "1.65"
     },
     "spacing": {
       "padding": {
@@ -266,36 +338,48 @@
           "letterSpacing": "-0.03em"
         },
         "color": {
-          "text": "var:preset|color|deep-ink"
+          "text": "var:preset|color|bright-ink"
         }
       },
       "h1": {
         "typography": {
           "fontSize": "var:preset|font-size|h1",
           "lineHeight": "0.94"
+        },
+        "color": {
+          "text": "var:preset|color|bright-ink"
         }
       },
       "h2": {
         "typography": {
           "fontSize": "var:preset|font-size|h2",
           "lineHeight": "0.98"
+        },
+        "color": {
+          "text": "var:preset|color|bright-ink"
         }
       },
       "h3": {
         "typography": {
           "fontSize": "var:preset|font-size|h3",
           "lineHeight": "1.08"
+        },
+        "color": {
+          "text": "var:preset|color|bright-ink"
         }
       },
       "h4": {
         "typography": {
           "fontSize": "var:preset|font-size|h4",
           "lineHeight": "1.2"
+        },
+        "color": {
+          "text": "var:preset|color|bright-ink"
         }
       },
       "link": {
         "color": {
-          "text": "var:preset|color|deep-ink"
+          "text": "var:preset|color|bright-ink"
         },
         "typography": {
           "textDecoration": "none"
@@ -311,14 +395,14 @@
       },
       "button": {
         "color": {
-          "background": "var:preset|color|deep-ink",
-          "text": "var:preset|color|warm-beige"
+          "background": "var:preset|color|vibrant-orange",
+          "text": "var:preset|color|white"
         },
         "typography": {
           "fontFamily": "var:preset|font-family|interface-sans",
           "fontSize": "var:preset|font-size|small",
           "fontWeight": "600",
-          "letterSpacing": "0.05em",
+          "letterSpacing": "0.06em",
           "textTransform": "uppercase"
         },
         "border": {
@@ -334,7 +418,7 @@
         },
         ":hover": {
           "color": {
-            "background": "var:preset|color|vibrant-orange",
+            "background": "var:preset|color|vibrant-green",
             "text": "var:preset|color|white"
           }
         }
@@ -348,20 +432,26 @@
           "fontWeight": "600",
           "letterSpacing": "0.08em",
           "textTransform": "uppercase"
+        },
+        "color": {
+          "text": "var:preset|color|bright-ink"
         }
       },
       "core/post-title": {
         "typography": {
           "fontFamily": "var:preset|font-family|editorial-serif",
           "letterSpacing": "-0.02em"
+        },
+        "color": {
+          "text": "var:preset|color|bright-ink"
         }
       },
       "core/separator": {
         "color": {
-          "text": "var:preset|color|warm-sand"
+          "text": "var:preset|color|border-dark"
         },
         "border": {
-          "color": "var:preset|color|warm-sand"
+          "color": "var:preset|color|border-dark"
         }
       }
     }

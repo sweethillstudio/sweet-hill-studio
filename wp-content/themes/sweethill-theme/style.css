@@ -39,8 +39,8 @@ button,
   transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
 }
 
-/* Custom selection styling */
+/* Custom selection styling (Oryzo Accent) */
 ::selection {
-  background-color: #F4EFEA;
-  color: #121316;
+  background-color: #FF5500;
+  color: #FFFFFF;
 }
