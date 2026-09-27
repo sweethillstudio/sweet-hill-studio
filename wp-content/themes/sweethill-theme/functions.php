@@ -2,6 +2,8 @@
 /**
  * Sweet Hill Studio Theme functions and definitions.
  *
+ * Immersive Scroll Engine & Oryzo.ai Aesthetic Integration.
+ *
  * @package SweetHill\Theme
  */
 
@@ -59,7 +61,7 @@ function sweethill_theme_setup() {
 add_action('after_setup_theme', 'sweethill_theme_setup');
 
 /**
- * Enqueue theme stylesheets, fonts, and 3D parallax scripts.
+ * Enqueue theme stylesheets, fonts, Lenis smooth scrolling, GSAP & ScrollTrigger.
  */
 function sweethill_theme_scripts() {
     $theme_version = wp_get_theme()->get('Version');
@@ -72,7 +74,7 @@ function sweethill_theme_scripts() {
         $theme_version
     );
 
-    // Enqueue 3D Parallax Hero styles.
+    // Enqueue 3D Parallax Hero & Oryzo styling.
     wp_enqueue_style(
         'sweethill-hero-3d-style',
         SWEETHILL_THEME_URI . '/assets/css/hero-3d.css',
@@ -83,14 +85,24 @@ function sweethill_theme_scripts() {
     // Enqueue web fonts from Google Fonts CDN as fallback when local font files are pending.
     wp_enqueue_style(
         'sweethill-theme-fonts',
-        'https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap',
+        'https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap',
         [],
         null
     );
 
     // -------------------------------------------------------------
-    // Enqueue GSAP & ScrollTrigger for 3D Parallax Frontend
+    // Enqueue Lenis, GSAP & ScrollTrigger for Immersive 3D Scrolling
     // -------------------------------------------------------------
+    // 1. Lenis Smooth Scroll Engine
+    wp_enqueue_script(
+        'lenis',
+        'https://unpkg.com/lenis@1.1.18/dist/lenis.min.js',
+        [],
+        '1.1.18',
+        true
+    );
+
+    // 2. GreenSock GSAP Core
     wp_enqueue_script(
         'gsap',
         'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js',
@@ -99,6 +111,7 @@ function sweethill_theme_scripts() {
         true
     );
 
+    // 3. GSAP ScrollTrigger
     wp_enqueue_script(
         'scroll-trigger',
         'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js',
@@ -107,11 +120,11 @@ function sweethill_theme_scripts() {
         true
     );
 
-    // Enqueue custom 3D animation script.
+    // 4. Custom Animation Engine
     wp_enqueue_script(
         'sweethill-animations',
         SWEETHILL_THEME_URI . '/assets/js/animations.js',
-        ['gsap', 'scroll-trigger'],
+        ['lenis', 'gsap', 'scroll-trigger'],
         $theme_version,
         true
     );

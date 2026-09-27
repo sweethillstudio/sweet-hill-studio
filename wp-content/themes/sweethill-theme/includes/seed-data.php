@@ -3,7 +3,7 @@
  * Programmatic Content Seeder for Sweet Hill Studio.
  *
  * Populates initial Books, Storymakers, and Series from 02-WEBSITE-CONTENT-MASTER.md.
- * Runs on theme activation or via admin trigger.
+ * Runs on theme activation (after_switch_theme) or via admin trigger.
  *
  * @package SweetHill\Theme
  */
@@ -72,9 +72,9 @@ function sweethill_seed_initial_content() {
         return;
     }
 
-    // Prevent redundant execution unless forced via URL parameter.
+    // Prevent redundant execution unless forced via URL parameter (?sweethill_reseed=1).
     $forced = isset($_GET['sweethill_reseed']) && $_GET['sweethill_reseed'] === '1';
-    if (get_option('sweethill_data_seeded_v1') && !$forced) {
+    if (get_option('sweethill_data_seeded_v2') && !$forced) {
         return;
     }
 
@@ -139,7 +139,7 @@ function sweethill_seed_initial_content() {
     }
 
     // -------------------------------------------------------------
-    // 3. Seed Book 01: Nārada's Quest
+    // 3. Seed Book 01: Nārada's Quest (02-WEBSITE-CONTENT-MASTER.md §3.1)
     // -------------------------------------------------------------
     $narada_post = get_page_by_path('naradas-quest', OBJECT, 'book');
     if (!$narada_post) {
@@ -189,7 +189,7 @@ function sweethill_seed_initial_content() {
     }
 
     // -------------------------------------------------------------
-    // 4. Seed Book 02: Me & Mr Puri
+    // 4. Seed Book 02: Me & Mr Puri (02-WEBSITE-CONTENT-MASTER.md §3.2)
     // -------------------------------------------------------------
     $puri_post = get_page_by_path('me-and-mr-puri', OBJECT, 'book');
     if (!$puri_post) {
@@ -224,7 +224,7 @@ function sweethill_seed_initial_content() {
     }
 
     // Mark as seeded.
-    update_option('sweethill_data_seeded_v1', true);
+    update_option('sweethill_data_seeded_v2', true);
 }
 
 // Hook to theme activation and admin_init for safe one-time execution.
