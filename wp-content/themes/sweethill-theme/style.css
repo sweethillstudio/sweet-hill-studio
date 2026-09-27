@@ -1,0 +1,46 @@
+/*
+Theme Name:        Sweet Hill Studio Theme
+Theme URI:         https://www.sweethillstudio.com/
+Author:            Sweet Hill Studio
+Author URI:        https://www.sweethillstudio.com/
+Description:       A bespoke native WordPress Block Theme implementing the "Contemporary Editorial Wonder" aesthetic for Sweet Hill Studio. Designed with quiet confidence, refined typography, and seamless commerce integration.
+Version:           1.0.0
+Requires at least: 6.5
+Tested up to:      6.7
+Requires PHP:      7.4
+License:           Proprietary
+License URI:       https://www.sweethillstudio.com/
+Text Domain:       sweethill-theme
+Tags:              full-site-editing, block-themes, custom-colors, custom-typography, editor-style, wide-blocks
+*/
+
+/*
+ * Foundational CSS resets & utilities.
+ * The primary styling is declared in theme.json.
+ */
+
+:root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Tabular figures for pricing and bibliographic identifiers */
+.tabular-nums,
+.price,
+.sku {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle transitions for interactive elements */
+a,
+button,
+.wp-block-button__link {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+
+/* Custom selection styling */
+::selection {
+  background-color: #F4EFEA;
+  color: #121316;
+}

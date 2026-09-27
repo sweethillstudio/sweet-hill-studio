@@ -1,0 +1,78 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"default"}} -->
+<main class="wp-block-group">
+
+	<!-- Top Section: Book Editorial Stage (Cover + Meta) -->
+	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|70"}}},"backgroundColor":"warm-ivory","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull has-warm-ivory-background-color has-background" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--70)">
+		<!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
+		<div class="wp-block-group alignwide">
+			<!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|40","left":"var:preset|spacing|60"}}}} -->
+			<div class="wp-block-columns">
+				<!-- Left Column: Book Cover Presentation (5 Columns / 42%) -->
+				<!-- wp:column {"width":"42%"} -->
+				<div class="wp-block-column" style="flex-basis:42%">
+					<!-- wp:post-featured-image {"aspectRatio":"1","style":{"border":{"color":"var:preset|color|soft-parchment","width":"1px","radius":"0px"}}} /-->
+				</div>
+				<!-- /wp:column -->
+
+				<!-- Right Column: Editorial Title, Taxonomy Badges & Details (7 Columns / 58%) -->
+				<!-- wp:column {"width":"58%"} -->
+				<div class="wp-block-column" style="flex-basis:58%">
+					<!-- wp:post-terms {"term":"age_range","prefix":"Age: ","style":{"typography":{"fontSize":"var:preset|font-size|caption","textTransform":"uppercase","letterSpacing":"0.08em","fontWeight":"600"}},"textColor":"terracotta"} /-->
+
+					<!-- wp:post-title {"level":1,"style":{"typography":{"fontFamily":"var:preset|font-family|editorial-serif","fontSize":"var:preset|font-size|h1","lineHeight":"1.15"},"spacing":{"margin":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|30"}}}} /-->
+
+					<!-- wp:post-terms {"term":"book_format","prefix":"Format: ","style":{"typography":{"fontSize":"var:preset|font-size|small"}},"textColor":"muted-earth"} /-->
+
+					<!-- wp:post-excerpt {"style":{"typography":{"fontSize":"var:preset|font-size|body","lineHeight":"1.7"},"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}}} /-->
+
+					<!-- Edition & Purchasing Bridge -->
+					<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}},"border":{"color":"var:preset|color|soft-parchment","width":"1px","radius":"2px"}},"backgroundColor":"soft-parchment","layout":{"type":"constrained"}} -->
+					<div class="wp-block-group has-soft-parchment-background-color has-background" style="border-color:var(--wp--preset--color--soft-parchment);border-width:1px;border-style:solid;border-radius:2px;padding:var(--wp--preset--spacing--40)">
+						<!-- wp:heading {"level":3,"style":{"typography":{"fontFamily":"var:preset|font-family|interface-sans","fontSize":"var:preset|font-size|small","textTransform":"uppercase","letterSpacing":"0.08em","fontWeight":"600"}}} -->
+						<h3 class="wp-block-heading has-interface-sans-font-family has-small-font-size" style="font-weight:600;letterSpacing:0.08em;text-transform:uppercase">Available Editions</h3>
+						<!-- /wp:heading -->
+
+						<!-- wp:paragraph {"style":{"typography":{"fontSize":"var:preset|font-size|small"}},"textColor":"charcoal"} -->
+						<p class="has-charcoal-color has-text-color has-small-font-size">Available in beautifully printed hardcover and paperback editions.</p>
+						<!-- /wp:paragraph -->
+
+						<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|30"}}}} -->
+						<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--30)">
+							<!-- wp:button -->
+							<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/shop/">Purchase Edition</a></div>
+							<!-- /wp:button -->
+						</div>
+						<!-- /wp:buttons -->
+					</div>
+					<!-- /wp:group -->
+				</div>
+				<!-- /wp:column -->
+			</div>
+			<!-- /wp:columns -->
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
+
+	<!-- Bottom Section: Deep Scroll Narrative & Full Story Description -->
+	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|80"}},"border":{"top":{"color":"var:preset|color|soft-parchment","width":"1px"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull" style="border-top-color:var(--wp--preset--color--soft-parchment);border-top-width:1px;border-top-style:solid;padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--80)">
+		<!-- wp:group {"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group">
+			<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var:preset|font-family|editorial-serif","fontSize":"var:preset|font-size|h2"}}} -->
+			<h2 class="wp-block-heading has-editorial-serif-font-family has-h-2-font-size">The Story &amp; Origin</h2>
+			<!-- /wp:heading -->
+
+			<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
