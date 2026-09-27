@@ -7,6 +7,13 @@
 
 defined('ABSPATH') || exit;
 
+// Define theme directory and URL constants.
+define('SWEETHILL_THEME_DIR', get_template_directory());
+define('SWEETHILL_THEME_URI', get_template_directory_uri());
+
+// Load programmatic seed data routine.
+require_once SWEETHILL_THEME_DIR . '/includes/seed-data.php';
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  */
@@ -52,15 +59,25 @@ function sweethill_theme_setup() {
 add_action('after_setup_theme', 'sweethill_theme_setup');
 
 /**
- * Enqueue theme stylesheets and fonts.
+ * Enqueue theme stylesheets, fonts, and 3D parallax scripts.
  */
 function sweethill_theme_scripts() {
+    $theme_version = wp_get_theme()->get('Version');
+
     // Enqueue main stylesheet.
     wp_enqueue_style(
         'sweethill-theme-style',
         get_stylesheet_uri(),
         [],
-        wp_get_theme()->get('Version')
+        $theme_version
+    );
+
+    // Enqueue 3D Parallax Hero styles.
+    wp_enqueue_style(
+        'sweethill-hero-3d-style',
+        SWEETHILL_THEME_URI . '/assets/css/hero-3d.css',
+        ['sweethill-theme-style'],
+        $theme_version
     );
 
     // Enqueue web fonts from Google Fonts CDN as fallback when local font files are pending.
@@ -69,6 +86,34 @@ function sweethill_theme_scripts() {
         'https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap',
         [],
         null
+    );
+
+    // -------------------------------------------------------------
+    // Enqueue GSAP & ScrollTrigger for 3D Parallax Frontend
+    // -------------------------------------------------------------
+    wp_enqueue_script(
+        'gsap',
+        'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js',
+        [],
+        '3.12.5',
+        true
+    );
+
+    wp_enqueue_script(
+        'scroll-trigger',
+        'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js',
+        ['gsap'],
+        '3.12.5',
+        true
+    );
+
+    // Enqueue custom 3D animation script.
+    wp_enqueue_script(
+        'sweethill-animations',
+        SWEETHILL_THEME_URI . '/assets/js/animations.js',
+        ['gsap', 'scroll-trigger'],
+        $theme_version,
+        true
     );
 }
 add_action('wp_enqueue_scripts', 'sweethill_theme_scripts');
